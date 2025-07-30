@@ -90,8 +90,7 @@
     <section id="experience">
       <p class="section__text__p1"></p>
       <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
+      <div class="projects-wrapper">
           <div class="details-container">
             <div class="article-container">
               <article>
@@ -110,8 +109,7 @@
           </div>
         </div>
       </div>
-      <div class="experience-details-container">
-        <div class="about-containers">
+      <div class="projects-wrapper">
           <div class="details-container">
             <div class="article-container">
               <article>
@@ -131,8 +129,25 @@ Founded and scaled a five-figure home exterior maintenance business specializing
           </div>
         </div>
       </div>
-      <div class="experience-details-container">
-        <div class="about-containers">
+      <div class="projects-wrapper">
+          <div class="details-container">
+            <div class="article-container">
+              <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+  <div>
+    <h3>
+      <h3>
+      Junior Software Analyst @ Toyota
+      <span class="subtext">(Sep 2023 – Jun 2024, Oakville, ON)</span>
+    </h3>
+    <p>Developed internal tools to automate inventory tracking, optimize customer data workflows, and improve website performance through debugging and iterative testing.
+  </div>
+</article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="projects-wrapper">
           <div class="details-container">
             <div class="article-container">
               <article>
@@ -145,25 +160,6 @@ Founded and scaled a five-figure home exterior maintenance business specializing
     <p>Led training and operations for 100+ students, organizing logistics and preparing members for competition. Personally placed Top 10 in the world and 1st in Canada at the 2024 DECA International Conference.
 </p>
   </div>
-</article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <div class="article-container">
-              <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-  <div>
-    <h3>
-      Junior Software Analyst @ Toyota
-      <span class="subtext">(Sep 2022 – Jun 2023, Oakville, ON)</span>
-    </h3>
-    <p>Developed internal tools to automate inventory tracking, optimize customer data workflows, and improve website performance through debugging and iterative testing.
-</p>
-  </div>
 
             </div>
           </div>
@@ -173,42 +169,31 @@ Founded and scaled a five-figure home exterior maintenance business specializing
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
+      <div class="projects-wrapper">
           <div class="project-card">
   <div class="project-image-section">
     <h2 class="project-title-top">NeuroScan</h2>
-    <img src="./assets/brain.png" alt="NeuroScan Project" class="project-img" />
+    <img src="./assets/neuroopic.png" alt="NeuroScan Project" class="project-img" />
     <div class="btn-container">
       <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/zavdr/NeuroScan'">Github</button>
       <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/zavdr/NeuroScan'">Live Demo</button>
     </div>
   </div>
   <div class="project-description-section">
-    <p class="project-description">
-      AI-powered system that detects brain tumors from MRI scans using deep learning techniques, including MobileNet and transfer learning. Designed to assist early diagnosis through image classification.
-    </p>
+  <p class="project-description">
+    AI system that classifies MRI brain scans to detect tumors using CNNs and MobileNet.
+  </p>
+  <ul class="project-description-ul">
+    <li>Achieved 92% validation accuracy with a CNN + MobileNet model.</li>
+    <li>Reduced training time by 45% using a 70/15/15 data split.</li>
+    <li>Visualized accuracy/loss curves for
   </div>
 </div>
+          
           <div class="project-card">
   <div class="project-image-section">
-    <h2 class="project-title-top">LingoLeap</h2>
-    <img src="./assets/language.png" alt="LingoLeap Project" class="project-img" />
-    <div class="btn-container">
-      <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/zavdr/Lingo-Leap'">Github</button>
-      <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/zavdr/Lingo-Leap'">Live Demo</button>
-    </div>
-  </div>
-  <div class="project-description-section">
-    <p class="project-description">
-      Language learning app designed with interactive lessons, vocabulary games, and pronunciation quizzes. Created with mobile-first design and real-time progress tracking for personalized learning.
-    </p>
-  </div>
-</div>
-          <div class="project-card">
-  <div class="project-image-section">
-    <h2 class="project-title-top">coming soon...</h2>
-    <img src="REPLACEIMAGEHERE.png" alt="Project Three" class="project-img" />
+    <h2 class="project-title-top">DashDough</h2>
+    <img src="./assets/dashdough.png" alt="Project Three" class="project-img" />
     <div class="btn-container">
       <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/zavdr'">Github</button>
       <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/zavdr'">Live Demo</button>
@@ -216,8 +201,31 @@ Founded and scaled a five-figure home exterior maintenance business specializing
   </div>
   <div class="project-description-section">
     <p class="project-description">
-      ...
-    </p>
+      Dashboard built with SQL and Power BI to optimize restaurant data analytics.
+        </p>
+         <ul class="project-description-ul">
+           <li>Built 3 Power BI dashboards for operational insights.</li>
+           <li>Designed a relational database to track 1K+ orders.</li>
+           <li>Wrote 20+ SQL queries to analyze KPIs and costs.</li>
+  </div>
+</div>
+<div class="project-card">
+  <div class="project-image-section">
+    <h2 class="project-title-top">LingoLeap</h2>
+    <img src="./assets/lingooleap.png" alt="LingoLeap Project" class="project-img" />
+    <div class="btn-container">
+      <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/zavdr/Lingo-Leap'">Github</button>
+      <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/zavdr/Lingo-Leap'">Live Demo</button>
+    </div>
+  </div>
+  <div class="project-description-section">
+    <p class="project-description">
+      Web app for language learning with interactive, progressive lessons.
+          </p>
+         <ul class="project-description-ul">
+           <li>Built with React Native and Expo for multi-platform support.</li>
+           <li>Secured login and storage using expo-secure-store.</li>
+           <li>Boosted user retention by 35% with reminders and tracking.</li>
   </div>
 </div>
         </div>

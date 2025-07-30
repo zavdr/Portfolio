@@ -1,5 +1,4 @@
 /* GENERAL */
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
@@ -20,14 +19,12 @@ p {
 }
 
 /* TRANSITION */
-
 a,
 .btn {
   transition: all 300ms ease;
 }
 
 /* DESKTOP NAV */
-
 nav,
 .nav-links {
   display: flex;
@@ -67,7 +64,6 @@ a:hover {
 }
 
 /* HAMBURGER MENU */
-
 #hamburger-nav {
   display: none;
 }
@@ -134,34 +130,19 @@ a:hover {
   transform: rotate(-45deg) translate(10px, -5px);
 }
 
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
 /* SECTIONS */
-
 section {
-  padding: 4rem 1rem; /* top & bottom spacing */
+  padding: 4rem 3rem;
   margin: 0 auto;
   max-width: 1000px;
   box-sizing: border-box;
 }
-
 
 .section-container {
   display: flex;
 }
 
 /* PROFILE SECTION */
-
 #profile {
   display: flex;
   justify-content: center;
@@ -207,18 +188,18 @@ section {
 }
 
 /* ICONS */
-
 .icon {
   cursor: pointer;
   height: 2rem;
 }
 
 /* BUTTONS */
-
 .btn-container {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 
 .btn {
@@ -257,25 +238,18 @@ section {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-.btn-container {
-  gap: 1rem;
-}
-
 /* ABOUT SECTION */
-
 #about {
   position: relative;
 }
 
 .about-containers {
   display: flex;
-  justify-content: space-between; /* keeps even spacing */
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 2rem;
 }
-
-
 
 .about-details-container {
   justify-content: center;
@@ -309,7 +283,6 @@ section {
   gap: 1rem;
 }
 
-
 .section-container {
   gap: 4rem;
   height: 80%;
@@ -322,7 +295,6 @@ section {
 }
 
 /* EXPERIENCE SECTION */
-
 #experience {
   position: relative;
 }
@@ -338,9 +310,8 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 0.5rem; /* reduce vertical spacing between each card */
+  gap: 0.5rem;
 }
-
 
 .article-container {
   display: flex;
@@ -356,25 +327,23 @@ article {
   align-items: center;
   justify-content: flex-start;
   gap: 0.75rem;
-  width: auto; /* or adjust if needed */
+  width: auto;
 }
 
-/* optional cleanup for spacing and alignment */
 article h3,
 article p {
   margin: 0;
   padding: 0;
 }
 
-
 article .icon {
   cursor: default;
 }
 
 /* PROJECTS SECTION */
-
 #projects {
   position: relative;
+  padding: 3rem 0 1rem 0;
 }
 
 .color-container {
@@ -383,9 +352,9 @@ article .icon {
 }
 
 .project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
 }
 
 .project-title {
@@ -398,8 +367,69 @@ article .icon {
   border-color: rgb(163, 163, 163);
 }
 
-/* CONTACT */
+.project-description {
+  margin: 0.5rem auto 0.75rem auto; /* auto left/right centers the block */
+  font-size: 1rem;
+  color: #555;
+  text-align: center; /* centers the text */
+  max-width: 90%;
+  width: 100%;
+  padding: 0;
+  display: block;
+}
 
+
+.project-description-ul {
+  text-align: left;
+  font-size: 0.8rem;
+  margin: 0.8rem 0 0 1.25rem;
+  padding-left: 1.25rem;
+  list-style-position: outside;
+}
+
+
+/* PROJECT CARD STRUCTURE */
+.project-card {
+  width: 31%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 1.5rem;
+  background-color: #fafafa;
+  box-sizing: border-box;
+  text-align: center;
+  min-width: 300px;
+  align-items: center;
+}
+
+.projects-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: nowrap;
+}
+
+.project-image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.project-title-top {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.project-description-section {
+  margin-top: 0.5rem;
+  padding: 0;
+}
+
+/* CONTACT */
 #contact {
   display: flex;
   justify-content: center;
@@ -438,8 +468,7 @@ article .icon {
   height: 2.5rem;
 }
 
-/* FOOTER SECTION */
-
+/* FOOTER */
 footer {
   height: 26vh;
   margin: 0 1rem;
@@ -449,55 +478,14 @@ footer p {
   text-align: center;
 }
 
-.subtext {
-  font-weight: 400;
-  font-size: 0.9rem;
-  color: gray;
-  margin-left: 0.5rem;
-}
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .projects-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.project-description {
-  margin: 0.5rem 0 1rem 0;
-  font-size: 0.95rem;
-  color: #555;
-  text-align: left;
-  max-width: 90%;
-}
-
-.project-card {
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 2rem;
-  border: 1px solid #ccc;
-  border-radius: 2rem;
-  background-color: #fafafa;
-  margin-bottom: 2rem;
-  flex-wrap: wrap; /* Optional: for mobile responsiveness */
-}
-
-.project-image-section {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.project-title-top {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.project-description-section {
-  flex: 1;
-  display: flex;
-  align-items: center; /* This vertically centers the content */
-  justify-content: center;
-}
-
-.project-description {
-  max-width: 90%;
-  font-size: 1rem;
-  line-height: 1.5;
+  .project-card {
+    width: 90%;
+  }
 }
