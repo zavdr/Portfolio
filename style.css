@@ -489,3 +489,11 @@ footer p {
     width: 90%;
   }
 }
+
+.experience-logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  border-radius: 0.25rem;
+  margin-right: 1rem;
+}
