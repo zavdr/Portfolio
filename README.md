@@ -1,4 +1,4 @@
-# zaviar durrani — portfolio
+# portfolio
 
 my minimalist dev portfolio for math, cs, and ai work.
 
