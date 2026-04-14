@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    background: #141414;
+    color: #f3f3f2;
+  }
+
+  ::selection {
+    background: rgba(255, 255, 255, 0.18);
+    color: #f8f8f8;
+  }
+
+  * {
+    border-color: #2a2a2a;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+    cursor: pointer;
+  }
+
+  button,
+  a {
+    transition:
+      transform 180ms ease,
+      filter 180ms ease,
+      color 180ms ease;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  @media (hover: hover) {
+    a:hover,
+    button:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.06);
+    }
+  }
+}
