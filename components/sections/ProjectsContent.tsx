@@ -14,19 +14,19 @@ export const projectsMetadata: Metadata = {
 export default function ProjectsContent({ id }: ProjectsContentProps) {
   return (
     <section id={id} className="scroll-mt-24">
-      <Section delay={0} className="mb-10 sm:mb-12">
-        <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.22em] text-text-soft">
+      <Section delay={0} className="mb-11 sm:mb-14">
+        <p className="mb-5 font-mono text-[11px] uppercase tracking-[0.22em] text-text-soft">
           Selected Work
         </p>
-        <h1 className="text-3xl font-medium tracking-quiet text-text sm:text-4xl">
+        <h1 className="text-3xl font-medium leading-tight tracking-[-0.025em] text-text sm:text-4xl">
           Projects
         </h1>
-        <p className="mt-4 max-w-xl text-sm lowercase leading-7 text-text-muted">
+        <p className="mt-4 max-w-xl text-sm lowercase leading-[1.9] text-white/60">
           Selected personal and side projects.
         </p>
       </Section>
 
-      <div className="space-y-6">
+      <div className="space-y-6 sm:space-y-7">
         {projects.map((project, i) => (
           <Section key={project.title} delay={0.05 * (i + 1)}>
             <ProjectItem project={project} />

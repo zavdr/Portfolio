@@ -27,12 +27,10 @@
   }
 
   a {
-    @apply transition-colors duration-200;
     cursor: pointer;
   }
 
-  button,
-  a {
+  button {
     transition:
       transform 180ms ease,
       filter 180ms ease,
@@ -51,10 +49,154 @@
   }
 
   @media (hover: hover) {
-    a:hover,
     button:hover {
       transform: translateY(-1px);
-      filter: brightness(1.06);
+      filter: brightness(1.04);
     }
+  }
+}
+
+@layer components {
+  .brand-link {
+    transition:
+      opacity 220ms cubic-bezier(0.22, 1, 0.36, 1),
+      color 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .nav-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding-bottom: 0.4rem;
+    color: #7a7a7a;
+    transition:
+      color 220ms cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.24);
+    opacity: 0.42;
+    transform: scaleX(0.74);
+    transform-origin: left center;
+    transition:
+      transform 240ms cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 240ms cubic-bezier(0.22, 1, 0.36, 1),
+      background-color 240ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .nav-link[data-active="true"] {
+    color: #f3f3f2;
+  }
+
+  .nav-link[data-active="true"]::after,
+  .nav-link:focus-visible::after {
+    opacity: 0.82;
+    transform: scaleX(1);
+    background: rgba(255, 255, 255, 0.58);
+  }
+
+  .inline-link {
+    position: relative;
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    transition:
+      color 220ms cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .inline-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.28rem;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.24);
+    opacity: 0.42;
+    transform: scaleX(0.74);
+    transform-origin: left center;
+    transition:
+      transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 220ms cubic-bezier(0.22, 1, 0.36, 1),
+      background-color 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .inline-link:focus-visible::after {
+    opacity: 0.78;
+    transform: scaleX(1);
+    background: rgba(255, 255, 255, 0.58);
+  }
+
+  .inline-link-hover-only::after {
+    opacity: 0;
+  }
+
+  .surface-card {
+    @apply rounded-2xl border;
+    border-color: rgba(255, 255, 255, 0.06);
+    background-color: rgba(255, 255, 255, 0.02);
+    transition:
+      transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 220ms cubic-bezier(0.22, 1, 0.36, 1),
+      background-color 220ms cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  @media (hover: hover) {
+    .brand-link:hover {
+      opacity: 0.82;
+    }
+
+    .nav-link:hover {
+      color: #f3f3f2;
+    }
+
+    .nav-link:hover::after {
+      opacity: 0.78;
+      transform: scaleX(1);
+      background: rgba(255, 255, 255, 0.58);
+    }
+
+    .inline-link:hover {
+      color: #f3f3f2;
+    }
+
+    .inline-link:hover::after {
+      opacity: 0.78;
+      transform: scaleX(1);
+      background: rgba(255, 255, 255, 0.58);
+    }
+
+    .surface-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.12);
+      background-color: rgba(255, 255, 255, 0.032);
+      box-shadow: 0 20px 44px -34px rgba(255, 255, 255, 0.18);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  button,
+  .brand-link,
+  .nav-link,
+  .inline-link,
+  .surface-card,
+  .nav-link::after,
+  .inline-link::after {
+    transition: none !important;
   }
 }

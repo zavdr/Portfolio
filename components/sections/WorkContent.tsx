@@ -14,19 +14,19 @@ export const workMetadata: Metadata = {
 export default function WorkContent({ id }: WorkContentProps) {
   return (
     <section id={id} className="scroll-mt-24">
-      <Section delay={0} className="mb-10 sm:mb-12">
-        <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.22em] text-text-soft">
+      <Section delay={0} className="mb-11 sm:mb-14">
+        <p className="mb-5 font-mono text-[11px] uppercase tracking-[0.22em] text-text-soft">
           Experience
         </p>
-        <h1 className="text-3xl font-medium tracking-quiet text-text sm:text-4xl">
+        <h1 className="text-3xl font-medium leading-tight tracking-[-0.025em] text-text sm:text-4xl">
           Work
         </h1>
-        <p className="mt-4 max-w-xl text-sm lowercase leading-7 text-text-muted">
+        <p className="mt-4 max-w-xl text-sm lowercase leading-[1.9] text-white/60">
           internship experience in software development, data science, and machine learning.
         </p>
       </Section>
 
-      <div className="space-y-6">
+      <div className="space-y-6 sm:space-y-7">
         {experience.map((exp, i) => (
           <Section key={exp.company} delay={0.05 * (i + 1)}>
             <ExperienceItem experience={exp} />

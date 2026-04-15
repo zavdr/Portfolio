@@ -86,7 +86,7 @@ export default function Navbar() {
       <div className="mx-auto flex w-full max-w-content items-center justify-between px-6 py-4 sm:px-8">
         <Link
           href="/"
-          className="text-sm font-medium tracking-quiet text-text hover:text-white"
+          className="brand-link text-sm font-medium tracking-quiet text-text"
         >
           {site.name}
         </Link>
@@ -103,11 +103,8 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={(event) => handleSectionClick(event, link.sectionId, link.href)}
-                className={`text-sm ${
-                  isActive
-                    ? "text-text"
-                    : "text-text-soft hover:text-text-muted"
-                }`}
+                data-active={isActive}
+                className="nav-link text-sm"
               >
                 {link.label}
               </Link>
